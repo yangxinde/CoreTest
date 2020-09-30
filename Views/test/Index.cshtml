@@ -1,0 +1,30 @@
+﻿@model WebApplication1.Models.testViewModel
+@{
+    ViewData["Title"] = "test Page";
+}
+<form asp-action="index">
+    <div class="group-search">
+        <div class="in">
+            <div class="ct">
+                <div class="item">
+                    <label for="Q_CodeType">關鍵字:</label>
+                    <input type="text" id="kk" name="kk" />
+                    <button type="submit" name="Btn" value="Search" class="objBut main1">送出查詢</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<table>
+    @foreach (var item in Model.data)
+    {
+        <tr>
+
+            <td><a href="@item.link">@item.userid</a></td>
+        </tr>
+    }
+</table>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
